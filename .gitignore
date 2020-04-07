@@ -1,13 +1,8 @@
-# OSX #
-.DS_Store
-
-# Byte-compiled / optimized / DLL files #
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Django #
-*.log
+*.pyc
+*~
+/.vscode
+__pycache__
+myvenv
 db.sqlite3
-media
-static
+/static
+.DS_Store
