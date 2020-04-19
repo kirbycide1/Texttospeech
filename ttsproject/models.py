@@ -9,7 +9,7 @@ class Project(models.Model):
     settings = JSONField()
 
 class Paragraphs(models.Model):
-    Project = models.ForeignKey(
+    project = models.ForeignKey(
         'Project',
         on_delete=models.CASCADE
     )

@@ -1,0 +1,21 @@
+.navbar-dark .navbar-nav .nav-link {
+	color: white !important;
+}
+
+.ptitle h1 {
+	font-size: 38px;
+	margin-bottom: 0px;
+	line-height: 1em;
+}
+
+.mtop-20 {
+	margin-top: 20px;
+}
+
+.btn-long {
+	min-width: 140px;
+}
+
+.query-builder .rules-group-container {
+	width: 100%;
+}

@@ -22,13 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '43)%4yx)aa@a=+_c(fn&kf3g29xax+=+a&key9i=!98zyim=8j'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,7 +32,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'texttwospeech.apps.TexttwospeechConfig',
    
 
     # Third-party
@@ -46,10 +39,11 @@ INSTALLED_APPS = [
     'allauth.account',
     'crispy_forms',
     'debug_toolbar',
+    'django_extensions',
+    'werkzeug',
 
     # Local
-    'users',
-    'pages',
+    'projects',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'djangox_project.urls'
+ROOT_URLCONF = 'ttsproject.urls'
 
 TEMPLATES = [
     {
@@ -81,18 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangox_project.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+WSGI_APPLICATION = 'ttsproject.wsgi.application'
 
 
 # Password validation
@@ -142,7 +125,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#internal-ips
 INTERNAL_IPS = ['127.0.0.1']
 
-AUTH_USER_MODEL = 'users.CustomUser'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
